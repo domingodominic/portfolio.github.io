@@ -1,0 +1,443 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap");
+@font-face {
+  font-family: title;
+  src: url("Poppins-Bold.ttf");
+}
+@font-face {
+  font-family: thins;
+  src: url("Poppins-Thin.ttf");
+}
+@font-face {
+  font-family: extralight;
+  src: url("Poppins-ExtraLight.ttf");
+}
+@font-face {
+  font-family: regular;
+  src: url("Poppins-Regular.ttf");
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: title;
+}
+
+nav {
+  position: relative;
+  width: 100svw;
+  display: flex;
+  height: 10%;
+  z-index: 5;
+}
+nav .moon {
+  position: absolute;
+  float: right;
+  top: 25px;
+  right: 80px;
+  cursor: pointer;
+}
+nav label {
+  padding: 20px;
+  font-size: 150%;
+  font-weight: bolder;
+  font-family: title;
+}
+nav ul {
+  position: absolute;
+  margin-left: 5%;
+  padding: 30px 20px 20px 20px;
+  display: inline-flex;
+  list-style: none;
+}
+nav ul li {
+  font-size: 80%;
+  margin-left: 40%;
+  font-family: regular;
+}
+nav ul li a {
+  text-decoration: none;
+  color: rgb(117, 117, 117);
+}
+nav ul li a:hover {
+  color: black;
+}
+nav .menu {
+  position: absolute;
+  float: right;
+  right: 9px;
+  visibility: hidden;
+}
+
+.home {
+  height: 90svh;
+  width: 100svw;
+  display: grid;
+  grid-template-columns: 45% 55%;
+}
+.home .col-home-one {
+  position: relative;
+  padding: 50px 0px 0px 50px;
+}
+.home .col-home-one h1 {
+  margin-top: 15%;
+  font-size: 350%;
+  font-family: "Tilt Warp", cursive;
+  letter-spacing: 2px;
+  margin-bottom: 10%;
+}
+.home .col-home-one p {
+  color: rgb(110, 110, 110);
+  font-family: regular;
+  font-style: 1rem;
+  margin-top: 10px;
+  line-height: 1.5rem;
+  margin-bottom: 10%;
+}
+.home .col-home-one .resume-btn {
+  position: absolute;
+  display: block;
+  cursor: pointer;
+  margin-top: 5px;
+  padding: 8px;
+  width: 30%;
+  border-radius: 10px;
+  background: none;
+  border: 2px solid #dec92e;
+  margin-right: auto;
+  color: #dec92e;
+  transition: 0.5s;
+}
+.home .col-home-one .resume-btn:hover {
+  background-color: #dec92e;
+  color: white;
+}
+.home .col-home-two img {
+  margin-left: 16%;
+  margin-top: 15%;
+  max-width: 70%;
+  min-width: 60%;
+  min-height: 60%;
+  max-height: 80%;
+}
+
+#about {
+  position: relative;
+  display: flex;
+  height: 100svh;
+  padding: 30px;
+}
+#about .about-title {
+  text-align: center;
+}
+#about .my-photo {
+  flex: 1;
+  margin-top: 10%;
+}
+#about .my-photo img {
+  width: 100%;
+  height: 70%;
+}
+#about .my-personality {
+  flex: 1;
+  padding: 100px;
+  padding-top: 150px;
+}
+#about .my-personality p {
+  line-height: 3rem;
+}
+
+#checkbox {
+  display: none;
+}
+
+.leftMe {
+  left: 0%;
+}
+
+.skills {
+  box-shadow: -9px -9px 11px #c1c1c1, 9px 9px 11px #ffffff;
+  border-radius: 20px;
+  margin-bottom: 50px;
+  margin: 0px 20px;
+  overflow: hidden;
+}
+
+.skill {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 3.5rem;
+  padding: 20px;
+}
+
+.skill:has(div) img {
+  width: 100%;
+  height: 200px;
+  min-height: 100px;
+  max-height: 200px;
+  transition: 1s;
+  cursor: pointer;
+}
+
+.skill div:hover {
+  transition: 0.5s;
+  transform: scale(1.2);
+}
+
+.skill:has(div) h1 {
+  padding: 10px;
+  color: #dec92e;
+  font-size: 20px;
+}
+
+.skill img:hover {
+  opacity: 1;
+}
+
+.skill:has(div) div {
+  box-shadow: 5px 5px 10px #b3b3b3, -5px -5px 10px #ffffff;
+  background: white;
+}
+
+.skills:has(:not(div) img:hover) {
+  opacity: 0.5;
+}
+
+.html:hover::after ~ body {
+  transform: translateX(200px);
+}
+
+body {
+  transition: all 0.5s ease-in-out;
+}
+
+.dark-mode {
+  background: #2c2c4c;
+  transition: all 0.5s;
+}
+
+.dark-mode .light-text {
+  color: white !important;
+}
+
+.dark-mode .light-white {
+  color: rgb(199, 199, 199) !important;
+}
+
+.skill {
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: 1s;
+  transition-property: all;
+}
+
+@media (max-width: 1206px) {
+  .col-home-one {
+    justify-content: center;
+    align-items: center;
+  }
+  .col-home-one h1 {
+    font-size: calc(1vw + 3rem);
+  }
+  .col-home-one p {
+    font-size: calc(1vw + 0.5rem);
+  }
+  #about .my-photo {
+    padding-left: 50px;
+  }
+  #about p {
+    line-height: 3rem;
+    color: rgb(40, 40, 40);
+    text-align: center;
+  }
+  #about .my-personality {
+    padding-top: 100px;
+  }
+}
+@media (max-width: 1140px) {
+  #about .my-photo {
+    margin-top: 10%;
+  }
+  #about .my-personality {
+    padding: 50px;
+    padding-top: 100px;
+  }
+  #about .my-personality h1 {
+    line-height: 0;
+    margin-bottom: 5px;
+  }
+  #about .my-personality p {
+    text-align: center;
+    line-height: 3rem;
+  }
+}
+@media (max-width: 900px) {
+  .home .col-home-one {
+    padding: 40px;
+  }
+  .home .col-home-one h1 {
+    margin-top: 5%;
+    text-align: center;
+  }
+  .home .col-home-one p {
+    text-align: center;
+  }
+  .home .col-home-one .resume-btn {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .home {
+    grid-template-columns: 1fr;
+  }
+  .menus {
+    display: block;
+  }
+  nav {
+    background-color: #dec92e;
+  }
+  nav ul {
+    background: #dec92e;
+    position: absolute;
+    top: 77px;
+    margin-left: 0;
+    width: 100%;
+    height: 100svh;
+    text-align: center;
+    left: -100%;
+    transition: 0.5s;
+    z-index: 3;
+  }
+  nav ul li {
+    margin: 0;
+    line-height: 8rem;
+    font-size: 20px;
+    z-index: 1;
+  }
+  nav .menu {
+    visibility: visible;
+  }
+  #about {
+    display: block;
+    margin-top: 60%;
+  }
+  #about .my-photo {
+    margin-top: 10px;
+  }
+  #about .my-photo img {
+    width: 70%;
+    margin-left: 12.5%;
+  }
+  #about .my-personality {
+    padding-top: 0px;
+  }
+  #about .my-personality h1 {
+    line-height: 4rem !important;
+  }
+  .skill {
+    grid-gap: 2rem;
+    padding: 20px;
+  }
+  .skill img {
+    height: 100px !important;
+  }
+}
+@media (max-width: 670px) {
+  #about {
+    padding: 0;
+    margin-top: 70%;
+  }
+  #about .my-photo {
+    margin-top: 50px;
+  }
+  #about .my-photo img {
+    width: 90%;
+    margin-left: 0;
+  }
+  #about .my-personality {
+    line-height: 2rem;
+  }
+  .skill {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    padding: 20px;
+  }
+}
+@media (max-width: 430px) {
+  .home .col-home-two img {
+    margin-left: 19%;
+    margin-top: 5%;
+  }
+  #about {
+    margin-top: 30%;
+  }
+  #about .my-personality {
+    padding-top: 50px;
+  }
+  #about .my-photo img {
+    width: 100%;
+    margin-left: -6.5%;
+  }
+  .skills {
+    margin-top: 100px;
+  }
+}
+@media (max-width: 400px) {
+  #about {
+    margin-top: 40%;
+  }
+  .skill {
+    grid-gap: 1rem;
+  }
+  .skill img {
+    height: 20px !important;
+  }
+}
+@media (max-width: 370px) {
+  .skills {
+    margin-top: 200px;
+  }
+  .skill {
+    justify-content: center;
+    grid-template-columns: repeat(2, 110px);
+  }
+  .skill h1 {
+    font-size: 12px !important;
+  }
+}
+@media (max-width: 360px), (max-height: 740px) {
+  .home .col-home-one {
+    padding-bottom: 5px;
+  }
+  .home .col-home-one h1 {
+    font-size: 250%;
+  }
+  .home .col-home-two img {
+    margin-top: 5%;
+  }
+}
+@media (max-width: 300px) {
+  .home .col-home-one {
+    padding: 20px;
+  }
+  .home .col-home-one h1 {
+    font-size: 250%;
+  }
+  #about {
+    margin-top: 20%;
+  }
+  #about .my-photo img {
+    margin-left: -11%;
+  }
+  #about .my-personality {
+    padding: 10px;
+  }
+  #about .my-personality h1 {
+    font-size: 20px;
+  }
+  #about .my-personality p {
+    font-size: 10px;
+    line-height: 2rem;
+  }
+}/*# sourceMappingURL=style.css.map */
